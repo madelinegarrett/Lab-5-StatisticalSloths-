@@ -111,6 +111,14 @@ sum_average <- milk1999 %>%
   as_tibble()
 sum_average
 ```
+Median: 
+```{r}
+median.sum <- milk1999 %>%
+  group_by(state) %>%
+  summarise(median = mean(milk_million)) %>%
+  as.tibble()
+median.sum
+```
 Most Milk by State:
 Most Milk:
 Least Milk:
