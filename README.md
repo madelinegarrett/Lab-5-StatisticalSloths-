@@ -62,7 +62,10 @@ milk2000 %>%
 ### Kevin's Birth Year 
 
 ```{r}
-
+milk <- milk %>%
+  mutate(milk_million = milk_produced/1000000)
+milk2000 <- milk %>%
+  filter(year == 2000)
 ```
 ### Kevin's Birth Year Summary: 
 
