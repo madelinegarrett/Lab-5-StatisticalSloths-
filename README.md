@@ -132,7 +132,7 @@ min.milk <- milk1999 %>%
   summarise(min = min(milk_million))
 min.milk
 ```
-#The year when the most milk was produced in the United States: 2014
+###The year when the most milk was produced in the United States: 2014
 ```{r}
 most.milk <- milk %>%
   group_by(year) %>%
