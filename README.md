@@ -120,5 +120,5 @@ median.sum <- milk1999 %>%
 median.sum
 ```
 Most Milk by State:
-Most Milk:
-Least Milk:
+
+Least Milk by State:
