@@ -15,6 +15,24 @@ milk <- read.csv('state_milk_production.csv')
 head(milk)
 ```
 
+# Team Graph 
+
+```{r}
+milksub <- milk %>%
+  filter(state %in% c('New York','Colorado','Minnesota','North Carolina','Oregon')) %>%
+  select(state, year, milk_million)
+
+milkavg <- milk %>%
+  mutate()
+  
+
+ggplot(data = milksub, aes(x = year, y = milk_million, color = state)) +
+  geom_point()+
+  ggtitle('Pounds of milk over time by state') +
+  xlab('Year') +
+  ylab('Milk Produced (Million lb)')
+```
+
 # Distribution of the Yearly Milk Production for: 
 ### Madeline's Birth Year 
 
