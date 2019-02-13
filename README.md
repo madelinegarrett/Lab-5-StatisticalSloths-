@@ -58,3 +58,27 @@ milk2000 %>%
     )
 
 ```
+
+### Kevin's Birth Year 
+
+```{r}
+
+```
+### Kevin's Birth Year Summary: 
+
+Average Milk by State: 
+```{r}
+
+```
+Median Milk By State: 
+```{r}
+
+```
+Most Milk: 
+```{r}
+
+```
+Least Milk: 
+```{r}
+
+```
