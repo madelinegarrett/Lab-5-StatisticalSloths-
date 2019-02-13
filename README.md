@@ -69,7 +69,7 @@ milk2001 <- milk %>%
 ```
 ### Kevin's Birth Year Summary: 
 
-Average Milk by State: 
+Average Milk: 
 ```{r}
 milk2001 %>%
   summarise(average = mean(milk_million)) %>%
@@ -103,14 +103,14 @@ ggplot(data = milk1999, aes(x = milk_million)) +
 ```
 
 ### Katie's Birth Year Summary:
-Average Milk by State:
+Average Milk:
 ```{r}
 sum_average <- milk1999 %>%
   summarise(average = mean(milk_million)) %>%
   as_tibble()
 sum_average
 ```
-Median: 
+Median Milk by State: 
 ```{r}
 median.sum <- milk1999 %>%
   group_by(state) %>%
