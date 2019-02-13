@@ -68,17 +68,23 @@ milk2000 %>%
 
 Average Milk by State: 
 ```{r}
-
+milk2000 %>%
+  summarise(average = mean(milk_million)) %>%
+  as_tibble()
 ```
 Median Milk By State: 
 ```{r}
-
+milk2000 %>%
+  summarise(median = median (milk_million)) %>%
+  as_tibble()
 ```
 Most Milk: 
 ```{r}
-
+milk2000 %>%
+  summarise(max = max(milk_million))
 ```
 Least Milk: 
 ```{r}
-
+milk2000 %>%
+  summarise(min = min(milk_million))
 ```
