@@ -106,7 +106,6 @@ ggplot(data = milk1999, aes(x = milk_million)) +
 Average Milk by State:
 ```{r}
 sum_average <- milk1999 %>%
-  group_by(state) %>%
   summarise(average = mean(milk_million)) %>%
   as_tibble()
 sum_average
