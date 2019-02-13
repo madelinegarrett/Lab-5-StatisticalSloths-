@@ -69,24 +69,24 @@ milk2001 <- milk %>%
 ```
 ### Kevin's Birth Year Summary: 
 
-Average Milk by State: 
+Average Milk by State (in millions of pounds): 3307
 ```{r}
 milk2001 %>%
   summarise(average = mean(milk_million)) %>%
   as_tibble()
 ```
-Median Milk By State: 
+Median Milk By State (in millions of pounds): 1402
 ```{r}
 milk2001 %>%
   summarise(median = median (milk_million)) %>%
   as_tibble()
 ```
-Most Milk: 
+Most Milk: California - 33217
 ```{r}
 milk2001 %>%
   summarise(max = max(milk_million))
 ```
-Least Milk: 
+Least Milk: Alaska - 14
 ```{r}
 milk2001 %>%
   summarise(min = min(milk_million))
@@ -120,5 +120,5 @@ median.sum <- milk1999 %>%
 median.sum
 ```
 Most Milk by State:
-
-Least Milk by State:
+Most Milk:
+Least Milk:
