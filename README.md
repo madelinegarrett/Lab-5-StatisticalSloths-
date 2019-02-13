@@ -64,30 +64,30 @@ milk2000 %>%
 ```{r}
 milk <- milk %>%
   mutate(milk_million = milk_produced/1000000)
-milk2000 <- milk %>%
-  filter(year == 2000)
+milk2001 <- milk %>%
+  filter(year == 2001)
 ```
 ### Kevin's Birth Year Summary: 
 
 Average Milk by State: 
 ```{r}
-milk2000 %>%
+milk2001 %>%
   summarise(average = mean(milk_million)) %>%
   as_tibble()
 ```
 Median Milk By State: 
 ```{r}
-milk2000 %>%
+milk2001 %>%
   summarise(median = median (milk_million)) %>%
   as_tibble()
 ```
 Most Milk: 
 ```{r}
-milk2000 %>%
+milk2001 %>%
   summarise(max = max(milk_million))
 ```
 Least Milk: 
 ```{r}
-milk2000 %>%
+milk2001 %>%
   summarise(min = min(milk_million))
 ```
