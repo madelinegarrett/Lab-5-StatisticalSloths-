@@ -15,24 +15,6 @@ milk <- read.csv('state_milk_production.csv')
 head(milk)
 ```
 
-# Team Graph 
-
-```{r}
-milksub <- milk %>%
-  filter(state %in% c('New York','Colorado','Minnesota','North Carolina','Oregon')) %>%
-  select(state, year, milk_million)
-
-milkavg <- milk %>%
-  mutate()
-  
-
-ggplot(data = milksub, aes(x = year, y = milk_million, color = state)) +
-  geom_point()+
-  ggtitle('Pounds of milk over time by state') +
-  xlab('Year') +
-  ylab('Milk Produced (Million lb)')
-```
-
 # Distribution of the Yearly Milk Production for: 
 ### Madeline's Birth Year 
 
@@ -109,3 +91,26 @@ Least Milk:
 milk2001 %>%
   summarise(min = min(milk_million))
 ```
+### Katie's Birth Year:
+```{r}
+milk <- milk %>%
+  mutate(milk_million = milk_produced/1000000)
+milk1999 <- milk %>%
+  filter(year == 1999)
+ggplot(data = milk1999, aes(x = milk_million)) +
+  geom_histogram(bins = 100) +
+  ggtitle('Histogram of Milk Produced in 1999 by State')
+```
+
+### Katie's Birth Year Summary:
+Average Milk by State:
+```{r}
+sum_average <- milk1999 %>%
+  group_by(state) %>%
+  summarise(average = mean(milk_million)) %>%
+  as_tibble()
+sum_average
+```
+Most Milk by State:
+Most Milk:
+Least Milk:
