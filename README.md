@@ -54,7 +54,6 @@ ggplot(data = milk2000, aes(x = milk_million)) +
 Mean: 
 ```{r}
 sum_mean <- milk2000 %>%
-  group_by(state) %>%
   summarise(Average = mean(milk_million)) %>%
   as_tibble()
 sum_mean
@@ -63,21 +62,28 @@ sum_mean
 Median: 
 ```{r}
 sum_median <- milk2000 %>%
-  group_by(state) %>%
-  summarise(Median = median (milk_million)) %>%
+  summarise(Median = median(milk_million)) %>%
   as_tibble()
 sum_median
 ```
 
 Max: 
 ```{r}
-milk2000 %>%
-  group_by(state) %>%
-  summarise(
-    max = max(milk_million)
-    )
+sum_max <- milk2000 %>%
+  summarise(Maximum= max(milk_million))
+sum_max
 
 ```
+
+Min: 
+```{r}
+sum_max <- milk2000 %>%
+  summarise(Minimum= min(milk_million))
+sum_max
+
+```
+
+
 
 ### Kevin's Birth Year 
 
