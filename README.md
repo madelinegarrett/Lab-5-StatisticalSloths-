@@ -166,6 +166,15 @@ most.milk <- milk %>%
 most.milk
 ```
 
+### The year when the least milk was produced in the United States: 2013
+```{r}
+least.milk <- milk %>%
+  group_by(year) %>%
+  summarise(min = min(milk_million)) %>%
+  arrange(min)
+least.milk
+```
+
 ### Top 5 Producers of Milk in 2017: CA, WI, NY, ID, TX
 ```{r}
 top_milk2017 <- milk %>%
