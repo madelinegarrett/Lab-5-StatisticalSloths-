@@ -88,7 +88,7 @@ milk2001 <- milk %>%
   filter(year == 2001)
 ggplot(data = milk2001, aes(x = milk_million)) +
   geom_freqpoly(bins = 100, color="red") + 
-  ggtitle('Freqpoly of milk produced in 2001 by state') + 
+  ggtitle("Milk Production in 2001") + 
   xlab("Milk Produced (millions of lbs)") + 
   ylab("# of States")
 ```
