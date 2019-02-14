@@ -167,15 +167,15 @@ ggplot(data = milk1998, aes(x = milk_million)) +
   geom_histogram(bins = 100) + 
   ggtitle('Histogram of milk produced in 1998 by state')
   ```
-  ### Zandy's Birth Year Summary:
-  Average Milk:
+ ### Zandy's Birth Year Summary:
+ Average Milk:
   ```{r}
   sum_average <- milk1998 %>%
   summarise(average = mean(milk_million)) %>%
   as_tibble()
   sum_average
   ```
-  Median Milk by State:
+ Median Milk by State:
    ```{r}
    median.sum <- milk 1998 %>%
    group_by(state) %>%
@@ -183,14 +183,14 @@ ggplot(data = milk1998, aes(x = milk_million)) +
    as_tibble()
    median.sum
    ```
-   Most Milk by State:
+  Most Milk by State:
     ```{r}
     max.milk <- milk1998 %>%
     group_by(state) %>%
     summarise(max = max(milk_million))
     max.milk
     ```
-   Least Milk by State:
+  Least Milk by State:
     ```{r}
     min.milk <- milk1998 %>%
     group_by(state) %>%
