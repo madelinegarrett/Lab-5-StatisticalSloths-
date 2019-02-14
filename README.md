@@ -160,3 +160,21 @@ most.milk <- milk %>%
   arrange(desc(max))
 most.milk
 ```
+
+### Top 5 Producers of Milk in 2017: CA, WI, NY, ID, TX
+```{r}
+top_milk2017 <- milk %>%
+  filter(year == 2017) %>%
+  arrange(desc(milk_million)) %>%
+  top_n(5, milk_million)
+top_milk2017
+```
+
+### Bottom 5 Producers of Milk in 2017: AK, RI, HI, AR, AL
+```{r}
+bottom_milk2017 <- milk %>%
+  filter(year == 2017) %>%
+  arrange(milk_million) %>%
+  top_n(-5, milk_million)
+bottom_milk2017
+```
