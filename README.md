@@ -54,6 +54,7 @@ ggplot(data = milk2000, aes(x = milk_million)) +
 Mean: 
 ```{r}
 sum_mean <- milk2000 %>%
+  group_by(state) %>%
   summarise(Average = mean(milk_million)) %>%
   as_tibble()
 sum_mean
@@ -62,28 +63,21 @@ sum_mean
 Median: 
 ```{r}
 sum_median <- milk2000 %>%
-  summarise(Median = median(milk_million)) %>%
+  group_by(state) %>%
+  summarise(Median = median (milk_million)) %>%
   as_tibble()
 sum_median
 ```
 
 Max: 
 ```{r}
-sum_max <- milk2000 %>%
-  summarise(Maximum= max(milk_million))
-sum_max
+milk2000 %>%
+  group_by(state) %>%
+  summarise(
+    max = max(milk_million)
+    )
 
 ```
-
-Min: 
-```{r}
-sum_max <- milk2000 %>%
-  summarise(Minimum= min(milk_million))
-sum_max
-
-```
-
-
 
 ### Kevin's Birth Year 
 
@@ -163,6 +157,19 @@ min.milk <- milk1999 %>%
   summarise(min = min(milk_million))
 min.milk
 ```
+### Zandy's Birth Year:
+```{r}
+milk <- milk %>%
+  mutate(milk_million = milk_produced/1000000)
+milk1998 <- milk %>%
+  filter(year == 1998)
+ggplot(data = milk1998, aes(x = milk_million)) +
+  geom_histogram(bins = 100) + 
+  ggtitle('Histogram of milk produced in 1998 by state')
+  ```
+  ### Zandy's Birth Year Summary:
+  ```{r}
+  
 ### The year when the most milk was produced in the United States: 2014
 ```{r}
 most.milk <- milk %>%
