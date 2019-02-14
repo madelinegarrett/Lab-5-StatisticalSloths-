@@ -183,20 +183,20 @@ ggplot(data = milk1998, aes(x = milk_million)) +
    as_tibble()
    median.sum
    ```
-  Most Milk by State:
-    ```{r}
-    max.milk <- milk1998 %>%
-    group_by(state) %>%
-    summarise(max = max(milk_million))
-    max.milk
-    ```
-  Least Milk by State:
-    ```{r}
-    min.milk <- milk1998 %>%
-    group_by(state) %>%
-    summarise(min = min(milk_million))
-    min.milk
-    ```
+ Most Milk by State:
+   ```{r}
+   max.milk <- milk1998 %>%
+   group_by(state) %>%
+   summarise(max = max(milk_million))
+   max.milk
+   ```
+ Least Milk by State:
+   ```{r}
+   min.milk <- milk1998 %>%
+   group_by(state) %>%
+   summarise(min = min(milk_million))
+   min.milk
+   ```
     
 ### The year when the most milk was produced in the United States: 2014
 ```{r}
