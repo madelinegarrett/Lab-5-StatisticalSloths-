@@ -86,6 +86,11 @@ milk <- milk %>%
   mutate(milk_million = milk_produced/1000000)
 milk2001 <- milk %>%
   filter(year == 2001)
+ ggplot(data = milk2001, aes(x = milk_million)) +
+  geom_freqpoly(bins = 100, color="red") + 
+  ggtitle('Freqpoly of milk produced in 2001 by state') + 
+  xlab("Milk Produced (millions of lbs)") + 
+  ylab("# of States")
 ```
 ### Kevin's Birth Year Summary: 
 
