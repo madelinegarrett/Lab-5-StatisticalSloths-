@@ -198,7 +198,7 @@ Least Milk by State:
   min.milk
   ```
 ### The year when the most milk was produced in the United States: 2014
-    ```{r}
+```{r}
 most.milk <- milk %>%
   group_by(year) %>%
   summarise(max = max(milk_million)) %>%
